@@ -1,25 +1,33 @@
 # Chicago Airbnb Price Analysis
 
 ## Overview
-This project analyzes over 8,000 Airbnb listings in Chicago to understand what factors most influence nightly pricing.
+This project analyzes 8,000+ Airbnb listings in Chicago to uncover **pricing patterns, demand signals, and neighborhood-level insights**. The goal is to translate raw listing data into **clear, business-relevant findings** that could support pricing strategy and market understanding.
 
-## Objectives
-- Explore price distribution across neighborhoods and room types
-- Identify key features correlated with price
-- Build a baseline regression model to predict nightly price
+## Business Questions
+- Which Chicago neighborhoods command the highest median nightly prices?
+- How does price differ by room type (entire home vs. private room)?
+- Which listing features are most strongly associated with higher prices?
+- What factors appear related to stronger demand (reviews and ratings)?
 
 ## Key Insights
-- Entire homes/apartments have the highest median prices
-- Location (latitude & longitude) is the strongest driver of price
-- Bedrooms and beds significantly impact pricing, with nonlinear effects
-- Baseline Linear Regression achieved an R² of ~0.39
+- **Entire homes/apartments** consistently have higher median prices than private or shared rooms  
+- **Location (neighborhood + latitude/longitude)** is the strongest driver of price variation  
+- **Bedrooms and beds** show a strong positive relationship with price, with diminishing returns at higher counts  
+- Listings with **higher review activity** tend to cluster in mid-priced ranges rather than luxury extremes  
 
-## Tech Stack
-- Python
-- Pandas, NumPy
-- Matplotlib, Seaborn
-- Scikit-learn
+## Analysis Approach
+- Data cleaning and validation on a pre-processed dataset  
+- Exploratory Data Analysis (EDA) using summary statistics and visualizations  
+- Grouped analysis by neighborhood and room type  
+- Correlation analysis to identify price drivers  
+- Simple regression used **only to quantify relationships**, not as a predictive ML product  
+
+## Tools & Technologies
+- Python  
+- Pandas, NumPy  
+- Matplotlib, Seaborn  
+- Scikit-learn (basic regression only)
 
 ## Files
-- `Chicago Airbnb Analysis Project.ipynb`: full analysis and model
-- `listings_chicago_clean.csv`: cleaned dataset
+- `Chicago Airbnb Analysis Project.ipynb` — full exploratory analysis and visualizations  
+- `listings_chicago_clean.csv` — cleaned dataset used for analysis
